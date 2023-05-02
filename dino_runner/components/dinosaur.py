@@ -34,10 +34,8 @@ class Dinosaur(Sprite): #PascalCase
         if self.action != DINO_JUMPING:
             if user_input[pygame.K_UP]:
                 self.action = DINO_JUMPING
-
-            elif user_input[pygame.K_DOWN] and self.action != DINO_JUMPING:
+            elif user_input[pygame.K_DOWN]:
                 self.action = DINO_DUCKING
-
             else:
                 self.action = DINO_RUNNIG
 
