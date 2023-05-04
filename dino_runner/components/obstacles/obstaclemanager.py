@@ -10,7 +10,7 @@ class ObstacleManager:
 
     def update(self, game_speed, player, on_death):
         if len(self.obstacles) == 0:
-            obstacle = random.randint(0, 2)
+            obstacle = random.randint(0, 1)
             if obstacle == 0:
                 self.obstacles.append(Cactus())
             elif obstacle == 1:

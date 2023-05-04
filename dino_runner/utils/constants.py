@@ -1,6 +1,9 @@
 import pygame
 import os
 
+pygame.init()
+pygame.mixer.init()
+
 # Global Constants
 TITLE = "Chrome Dino Runner"
 SCREEN_HEIGHT = 600
@@ -11,6 +14,7 @@ IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 # Assets Constants
 ICON = pygame.image.load(os.path.join(IMG_DIR, "DinoWallpaper.png"))
 DINO_START = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoStart.png"))
+RESET = pygame.image.load(os.path.join(IMG_DIR, "Other/Reset.png"))
 
 RUNNING = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.png")),
@@ -69,5 +73,7 @@ HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
+SONG = pygame.mixer.Sound(os.path.join(IMG_DIR, "Dino/DinoMarioSong.mp3"))
 
 DEFAULT_TYPE = "default"
+SHIELD_TYPE = "shield"
